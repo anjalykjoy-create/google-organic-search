@@ -28,8 +28,7 @@ class SearchController extends Controller
         }
 
         try {
-            $response = Http::withoutVerifying()
-                ->timeout(30)
+            $response = Http::timeout(30)
                 ->get(
                     'https://serpapi.com/search.json',
                     [
